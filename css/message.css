@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= */
+/* #content-main-1{
+    margin-left: 7vmax;
+} */
+.main-sec {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    justify-content: center;
+    margin: auto;
+}
+/* ================== */
+.main-message-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.user-detail-fixed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 93%;
+    position: fixed;
+    background: black;
+    top: 0;
+}
+
+/* fixed nav 1 */
+.fixed-nav-1-detail {
+    display: flex;
+    width: 30vmax;
+    padding: 36px 24px 12px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fixed-nav-1-detail .user-name-fixed {
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.fixed-nav-1-detail .newmessage-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* second fixed */
+.user-detail-fixed .chat-detail-fixed {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    border-bottom: 1px solid rgb(54 54 54);
+    border-left: 1px solid rgb(54 54 54);
+
+}
+
+.user-detail-fixed .chat-detail-fixed .first-user {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.user-detail-fixed .chat-detail-fixed .first-user .first-user-image img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 6px;
+}
+
+.user-detail-fixed .chat-detail-fixed .first-user .first-user-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 6px;
+}
+
+.user-detail-fixed .chat-detail-fixed .first-user .first-user-name .first-user-name-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.user-detail-fixed .chat-detail-fixed .first-user .first-user-name .first-user-name-active {
+    font-size: 12px;
+    color: #a8a8a8;
+
+}
+
+.chat-detail-fixed .fixed-top-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+/* second section */
+/* >first div */
+.main-message {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    margin-top: 78px;
+}
+
+/* main profile section second */
+.main-message .profile-message-contact-detail {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    gap: 20px;
+}
+
+/* image */
+.main-message .profile-message-contact-detail .contact-detail-image {
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+}
+
+/* main img first div */
+.main-message .profile-message-contact-detail .contact-detail-image img {
+    width: 74px;
+    height: 74px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+/* contact image detail image tag yournote */
+.main-message .profile-message-contact-detail .contact-detail-image .con-det-img-tag {
+    font-size: 12px;
+    color: #a8a8a8;
+    padding: 10px;
+}
+
+/*========== main second============ */
+.main-message .profile-message-contact-detail .contact-detail-second {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 14px 24px 10px;
+}
+
+/* for second div message */
+.main-message .profile-message-contact-detail .contact-detail-second .con-det-mess {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* for reqquest */
+.main-message .profile-message-contact-detail .contact-detail-second .con-det-req {
+    font-size: 14px;
+    color: #a8a8a8;
+}
+
+/*=========== first card ===========*/
+/* main for flex */
+.main-message .profile-message-contact-detail .first-user {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* for image box */
+.main-message .profile-message-contact-detail .first-user .first-user-image {
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+}
+
+/* for image */
+.main-message .profile-message-contact-detail .first-user .first-user-image img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 6px;
+}
+
+/* for user name ali chishti etc */
+.main-message .profile-message-contact-detail .first-user .first-user-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6px;
+}
+
+/* for user name styling */
+.main-message .profile-message-contact-detail .first-user .first-user-name .first-user-name-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* for user name active */
+.main-message .profile-message-contact-detail .first-user .first-user-name .first-user-name-active {
+    font-size: 12px;
+    color: #a8a8a8;
+}
+
+/* last div for chat detail */
+.chat-detail {
+    display: flex;
+    flex-direction: column;
+    width: 70vmax;
+}
+
+.chat-detail .all-chat-user-deatail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.chat-detail .all-chat-user-deatail .chat-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.chat-detail .all-chat-user-deatail .chat-user .image-chat-det {
+    display: flex;
+    flex-direction: row;
+}
+
+.chat-detail .all-chat-user-deatail .chat-user .image-chat-det img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-detail .all-chat-user-deatail .chat-user .chat-det-name {
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.chat-detail .all-chat-user-deatail .chat-user .chat-det-user-name {
+    font-size: 14px;
+    color: #a8a8a8;
+}
+
+.chat-detail .all-chat-user-deatail .chat-user .chat-det-view-btn {
+    background: rgb(78, 78, 78);
+    font-size: 14px;
+    color: #f5f5f5;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+
+}
+
+.chat-detail .chat-input {
+    display: flex;
+    margin: 16px;
+    border: 1px solid rgb(54 54 54);
+    border-radius: 20px;
+    height: 44px;
+    width: 67%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    padding: 0 8px;
+
+}
+.chat-detail .chat-input .first-two-svgs{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.chat-detail .chat-input .main-input-text input {
+    /* width: 55vmax; */
+    background: transparent;
+    border: none;
+    color: #f5f5f5;
+}
+.chat-detail .chat-input .main-input-text input:focus{
+    outline: none;
+}
+
+.chat-detail .chat-input .main-input-text input::placeholder {
+    color: #a8a8a8;
+}
+
+.chat-detail .chat-input .input-last-svgs {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
