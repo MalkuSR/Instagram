@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instagram</title>
+  <!-- fevicon instagram -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logoimage (2).png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logoimage (2).png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logoimage (2).png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- bootstrape stylesheet cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- custom css links -->
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/story-sec.css">
+  <link rel="stylesheet" href="css/sugestion.css">
+  <link rel="stylesheet" href="css/post.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/messageresponsive.css">
+
+</head>
+
+<body>
+  <!-- pre loader -->
+  <div class="loader" id="loader">
+    <div class="progress-bar" id="myProgressBar">
+    </div>
+  </div>
+  <div id="preloader">
+    <img src="assets/images/preloader image.png" alt="">
+    <img src="assets/images/meta image.png" alt="">
+  </div>
+
+  <!--================ navbar section start ======================-->
+  <section>
+    <nav id="navbar-sec" class=" navbar-sec navbar-expand bg-body-dark " data-bs-theme="dark">
+      <ul class="navbar-nav d-flex flex-column nav-main justify-content-start">
+        <a class="navbar-brand my-4 ms-0 px-3" href="#"><span id="insta-logo" class="insta-logo ms-3"></span><img id="insta-name" class="insta-name"
+            src="assets/svg/logo.svg" alt="" srcset=""></a>
+        <li class="nav-item" id="nav-item">
+          <a class="nav-link navbar-item active" onclick="loadContent('home.html')" id="home" aria-current="page"
+            href="#"><img class="homeActive" onclick="loadContent('home.html')" src="assets/svg/homeNonActive.svg" alt="" srcset=""><span
+              class="i-d" >Home</span></a>
+        </li>
+        <!-- offcanvas search -->
+        <li class="nav-item" id="nav-item">
+          <a class="nav-link navbar-item active" id="searchOpenBtn" id="home" aria-current="page" href="#"><img class="searchActive" src="assets/svg/searchindex.svg"
+              alt="" srcset=""><span class="i-d">Search</span></a>
+        </li>
+        <div class="offcanva" id="offcanva">
+          <div class="content">
+            <h2 class="search-off"><span>Search</span></h2>
+            <div class="input"><input class="input-inner" type="text" placeholder="Search">
+              <div class="cancel-svg"><img src="assets/svg/crossoffinput.svg" alt=""></div>
+            </div>
+            <hr class="off-hr">
+            <div class="recent"><span>Recent</span></div>
+            <div class="recent-search-result">
+              <div class="result"><span></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <!-- offcanvas serach end -->
+        <li class="nav-item" id="nav-item">
+          <a class="nav-link navbar-item" onclick="loadContent('explore.html')" href="#"><img
+            class="exploreActive" onclick="loadContent('explore.html')" src="assets/svg/Explor.svg" alt="" srcset=""><span
+              class="i-d" id="i-d">Explore</span></a>
+        </li>
+        <li class="nav-item" id="nav-item">
+          <a class="nav-link navbar-item" onclick="loadContent('reels.html')" id="loadReels" aria-disabled="true"><img class="reelsActive"
+              class="reelBtn" onclick="loadContent('reels.html')" src="assets/svg/reels.svg" alt="" srcset=""><span
+              class="i-d" id="i-d">Reels</span></a>
+        </li>
+        <li class="nav-item" id="nav-item">
+          <a class="nav-link navbar-item" onclick="loadContent('messagebox.html')" aria-disabled="true"><img class="messageActive"
+              onclick="loadContent('messagebox.html')" src="assets/svg/messages.svg" alt="" srcset=""><span
+              class="i-d" id="i-d">Messages</span></a>
+        </li>
+        <li class="nav-item" id="nav-item">
+          <a class="nav-link navbar-item" id="notification" aria-disabled="true"><img  class="notificationActive" src="assets/svg/notification.svg" alt=""
+              srcset=""><span class="i-d" id="i-d">Notifications</span></a>
+        </li>
+        <!-- offcanvas notification -->
+        <div class="offcanva" id="offcanva">           
+          <div class="content">
+            <h2 class="search-off"><span>Notifications</span></h2>
+            <hr class="off-hr">
+            <div class="recent"><span>Recent</span></div>
+            <div class="recent-search-result">
+              <div class="result"><span></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <!-- offcanva end -->
+        <li class="nav-item" id="nav-item">
+          <a class="nav-link navbar-item" onclick="loadContent('create.html')" aria-disabled="true"><img class="createActive"
+              onclick="loadContent('create.html')" src="assets/svg/creat.svg" alt="" srcset=""><span
+              class="i-d" id="i-d">Create</span></a>
+        </li>
+        <li class="nav-item" id="nav-item">
+          <a class="nav-link  d-flex align-center" onclick="loadContent('profile.html')" aria-disabled="true"><img
+              class="pro-img" onclick="loadContent('profile.html')" src="assets/images/IMG-20240418-WA0007 (2).jpg"
+              alt="" srcset=""><span class="i-d mt-1 ms-1" id="i-d">Profile</span></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav d-flex flex-column nav-main justify-content-start">
+        <!-- last thread and more option -->
+        <li class="nav-item" id="nav-item">
+          <a class="nav-link thread navbar-item" target="_blank" href="threads.html" aria-disabled="true"><img
+              src="assets/svg/Treads.svg" alt="" srcset=""><span class="i-d" id="i-d">Threads</span></a>
+        </li>
+        <li class="nav-item" id="nav-item">
+          <a class="nav-link navbar-item" aria-disabled="true"><img src="assets/svg/moreindex.svg" alt="" srcset=""><span
+              class="i-d ms-0 ps-0" id="i-d">More</span></a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- ==============navbar for mobile devices start =================-->
+  <div class="row-gap-5">
+    <nav class="container-fluid navbar navbar-expand mob-t-nav d-none bg-body-dark " data-bs-theme="dark">
+      <a class="navbar-brand" href="#"><img onclick="loadContent('home.html')" class="insta-name px-2"
+          src="assets/svg/logo.svg" alt="" srcset="">
+        <span class="dropdown p-0 ms-0 mt-0 ">
+          <a class="btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img
+              src="/Instagram-assets/svg/dropdown.svg" alt="">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Follwing <img src="/Instagram-assets/svg/following .svg" alt=""></a>
+            </li>
+            <li><a class="dropdown-item" href="#">Favourit <img src="/Instagram-assets/svg/favourit.svg" alt=""></a>
+            </li>
+          </ul>
+        </span>
+      </a>
+      <ul class="navbar-nav d-flex flex-row justify-content-start search-m-e">
+        <li class="nav-item" id="nav-item">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <img class="d-none search-m mb-0" src="assets/svg/searchindex.svg" alt="" srcset="">
+          </form>
+        </li>
+        <li class="nav-item" id="nav-item">
+          <a class="nav-link" aria-disabled="true"><img src="assets/svg/notification.svg" alt=""
+              srcset=""><span></span></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container-fluid mob-b-nav d-none">
+    <ul class="navbar-nav d-flex flex-row justify-content-start">
+      <li class="nav-item mob-i-m" id="nav-item">
+        <a class="nav-link active" aria-current="page" href="#"><img onclick="loadContent('home.html')"
+          class="homeActive" src="assets/svg/homeNonActive.svg" alt="" srcset=""><span class="i-d" id="i-d"></span></a>
+      </li>
+      <li class="nav-item mob-i-m" id="nav-item">
+        <a class="nav-link" href="#"><img class="exploreActive" onclick="loadContent('explore.html')" src="assets/svg/Explor.svg" alt=""
+            srcset=""><span class="i-d" id="i-d"></span></a>
+      </li>
+      <li class="nav-item mob-i-m" id="nav-item">
+        <a class="nav-link" aria-disabled="true"><img class="reelsActive" onclick="loadContent('reels.html')" src="assets/svg/reels.svg"
+            alt="" srcset=""><span class="i-d" id="i-d"></span></a>
+      </li>
+      <li class="nav-item mob-i-m" id="nav-item">
+        <a class="nav-link" aria-disabled="true"><img class="createActive" onclick="loadContent('create.html')" src="assets/svg/creat.svg"
+            alt="" srcset=""><span class="i-d" id="i-d"></span></a>
+      </li>
+      <li class="nav-item mob-i-m" id="nav-item">
+        <a class="nav-link" aria-disabled="true"><img class="messageActive" onclick="loadContent('messagebox.html')"
+            src="assets/svg/messages.svg" alt="" srcset=""><span class="i-d" id="i-d"></span></a>
+      </li>
+      <li class="nav-item mob-i-m" id="nav-item">
+        <a class="nav-link" aria-disabled="true"><img class="pro-img" onclick="loadContent('profile.html')"
+            src="assets/images/IMG-20240418-WA0007 (2).jpg" alt="" srcset=""></a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ======================== navbar mobile exit ========================== -->
+  <!-- navbar section end -->
+
+  <!--========================= content section start =================-->
+  <div class="content-main-1" id="content-main-1">
+    <section class="main-sec">
+      <div class=" d-flex justify-content-center">
+        <!-- ======= post page section start -->
+        <div class="container post-sec d-flex justify-content-center">
+          <!-- story sec start -->
+          <div class=" stories d-flex">
+            <!-- add your story card -->
+            <div class=" story-card">
+              <div class="back-linear-not">
+                <img src="assets/images/IMG-20240418-WA0007 (2).jpg" alt="">
+                <div class="plus-icon-story">
+                  <img src="assets/svg/pluspost.svg" alt="">
+                </div>
+              </div>
+              <div class="name">
+                <p>Mr.Malik5431</p>
+              </div>
+            </div>
+            <!-- card-4 -->
+            <div class="story-card">
+              <div class="back-linear">
+                <img src="assets/images/IMG_4326.jpg" alt="">
+              </div>
+              <div class="name">
+                <p>Mr.Malik5431</p>
+              </div>
+            </div>
+            <!-- card-5 -->
+            <div class=" story-card">
+              <div class="back-linear">
+                <img src="assets/images/IMG_4329.jpg" alt="">
+              </div>
+              <div class="name">
+                <p>Mr.Malik5431</p>
+              </div>
+            </div>
+          </div>
+          <!-- story sec end -->
+          <!-- suggestion sec start -->
+          <div class="container suggested-sec d-flex">
+            <div class="d-flex justify-content-end m-auto flex-column mt-5">
+              <div class="head-sugg">
+                <h4><span class="sugg">Suggestions for you</span></h4>
+                <h4><span class="see">See all</span></h4>
+              </div>
+              <div class="main-scroll-div">
+                <div class="cover-sugg-ca">
+                  <div>
+                    <button onclick="scrollr()" class="icon-caro icon-l"><i
+                        class="fas fa-angle-left angle-ic"></i></button>
+                  </div>
+                  <div class="scroll-images">
+                    <div class="child">
+                      <div class="child-image card-suggestion">
+                        <img class="cross-ic" src="/assets/svg/cross.svg" alt="img">
+                        <div class="item d-flex flex-column justify-content-center align-center">
+                          <div><img class="profile-su-img" src="/assets/images/IMG-20240418-WA0007 (2).jpg" alt="">
+                          </div>
+                          <span class=".name-su-ca">abdullah</span>
+                          <p><span class="para-1">Followed by</span><span class="para-2">mohsinkahn1345
+                              and...</span>
+                          </p>
+                          <span class="followed-imgs">
+                            <img class="followed-img-1" src="/assets/images/IMG_4326.jpg" alt="img">
+                            <img class="followed-img-2" src="/assets/images/IMG_4310.jpg" alt="">
+                          </span>
+                        </div>
+                        <div class="item-2">
+                          <a class="follow-end" href="">Follow</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="child">
+                      <div class="child-image card-suggestion">
+                        <img class="cross-ic" src="/assets/svg/cross.svg" alt="img">
+                        <div class="item d-flex flex-column justify-content-center">
+                          <div><img class="profile-su-img" src="/assets/images/IMG_4326.jpg" alt="">
+                          </div>
+                          <h6 class="name">abdullah</h6>
+                          <p><span class="para-1">Followed by</span><span class="para-2">mohsinkahn1345
+                              and...</span>
+                          </p>
+                          <span class="followed-imgs">
+                            <img class="followed-img-1" src="/assets/images/IMG_4326.jpg" alt="img">
+                            <img class="followed-img-2" src="/assets/images/IMG_4310.jpg" alt="">
+                          </span>
+                        </div>
+                        <div class="item-2">
+                          <a class="follow-end" href="">Follow</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="child">
+                      <div class="child-image card-suggestion">
+                        <img class="cross-ic" src="/assets/svg/cross.svg" alt="img">
+                        <div class="item d-flex flex-column justify-content-center">
+                          <div><img class="profile-su-img" src="/assets/images/IMG_4310.jpg" alt="">
+                          </div>
+                          <h6 class="name">abdullah</h6>
+                          <p><span class="para-1">Followed by</span><span class="para-2">mohsinkahn1345
+                              and...</span>
+                          </p>
+                          <span class="followed-imgs">
+                            <img class="followed-img-1" src="/assets/images/IMG_4326.jpg" alt="img">
+                            <img class="followed-img-2" src="/assets/images/IMG_4310.jpg" alt="">
+                          </span>
+                        </div>
+                        <div class="item-2">
+                          <a class="follow-end" href="">Follow</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="child">
+                      <div class="child-image card-suggestion">
+                        <img class="cross-ic" src="/assets/svg/cross.svg" alt="img">
+                        <div class="item d-flex flex-column justify-content-center">
+                          <div><img class="profile-su-img" src="/assets/images/IMG_4307.jpg" alt="">
+                          </div>
+                          <h6 class="name">abdullah</h6>
+                          <p><span class="para-1">Followed by</span><span class="para-2">mohsinkahn1345
+                              and...</span>
+                          </p>
+                          <span class="followed-imgs">
+                            <img class="followed-img-1" src="/assets/images/IMG_4326.jpg" alt="img">
+                            <img class="followed-img-2" src="/assets/images/IMG_4310.jpg" alt="">
+                          </span>
+                        </div>
+                        <div class="item-2">
+                          <a class="follow-end" href="">Follow</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="child">
+                      <div class="child-image card-suggestion">
+                        <img class="cross-ic" src="/assets/svg/cross.svg" alt="img">
+                        <div class="item d-flex flex-column justify-content-center">
+                          <div><img class="profile-su-img" src="/assets/images/IMG_7737.jpg" alt="">
+                          </div>
+                          <h6 class="name">abdullah</h6>
+                          <p><span class="para-1">Followed by</span><span class="para-2">mohsinkahn1345
+                              and...</span>
+                          </p>
+                          <span class="followed-imgs">
+                            <img class="followed-img-1" src="/assets/images/IMG_4326.jpg" alt="img">
+                            <img class="followed-img-2" src="/assets/images/IMG_4310.jpg" alt="">
+                          </span>
+                        </div>
+                        <div class="item-2">
+                          <a class="follow-end" href="">Follow</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="child">
+                      <div class="child-image card-suggestion">
+                        <img class="cross-ic" src="/assets/svg/cross.svg" alt="img">
+                        <div class="item d-flex flex-column justify-content-center">
+                          <div><img class="profile-su-img" src="/assets/images/IMG-20240418-WA0007 (2).jpg" alt="">
+                          </div>
+                          <h6 class="name">abdullah</h6>
+                          <p><span class="para-1">Followed by</span><span class="para-2">mohsinkahn1345
+                              and...</span>
+                          </p>
+                          <span class="followed-imgs">
+                            <img class="followed-img-1" src="/assets/images/IMG_4326.jpg" alt="img">
+                            <img class="followed-img-2" src="/assets/images/IMG_4310.jpg" alt="">
+                          </span>
+                        </div>
+                        <div class="item-2">
+                          <a class="follow-end" href="">Follow</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <button onclick="scrolll()" class="icon-caro icon-r"><i
+                        class="fas fa-angle-right angle-ic"></i></button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- suggestion sec end -->
+           <!-- suggestion sec start -->
+          <div class="justify-content-center">
+            <div class="post" data-post-id="1">
+            </div>
+            <!-- second card -->
+            <div class="post" data-post-id="2">
+              </span>
+            </div>
+            <!-- 3-c -->
+            <div class="post" data-post-id="3">
+            </div>
+            <!-- 4-c -->
+            <div class="post" data-post-id="4">
+            </div>
+            <!-- 5-c -->
+            <div class="post" data-post-id="5">
+            </div>
+            <!-- 6-c -->
+            <div class="post" data-post-id="6">
+            </div>
+            <!-- 7-c -->
+            <div class="post" data-post-id="7">
+            </div>
+            <!-- 8-c -->
+            <div class="post" data-post-id="8">
+            </div>
+            <!-- 9-c -->
+            <div class="post" data-post-id="9">
+            </div>
+            <!-- 10-c -->
+            <div class="post" data-post-id="10">
+            </div>
+            <!-- 11-c -->
+            <div class="post" data-post-id="11">
+            </div>
+            <!-- 12-c -->
+            <div class="post" data-post-id="12">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ======= post page section end -->
+      <div class=" sugested-foryou-main ">
+        <div class=" sugested-foryou-sec ">
+          <div class="container main-foryou d-flex-justify-contet-center">
+            <div class="your-profile">
+              <div class="profile-foryou">
+                <div class="image-foryou"><img class="image-foryou" src="/assets/images/IMG-20240418-WA0007 (2).jpg"
+                    alt="">
+                </div>
+                <div class="name-foryou">
+                  <span class="names">abdullah786</span>
+                  <span class="names">Mr.Malku</span>
+                </div>
+                <div class="switch-btn"><span class="switch-btn">
+                    <span class="switch-btn">Switch</span>
+                  </span></div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column">
+            <div class="suges-heading d-flex flex-row">
+              <div class="heading-1">
+                <p>Suggested for you</p>
+              </div>
+              <div class="see-all">
+                <p>See All</p>
+              </div>
+            </div>
+            <div class="suges-card-foryou">
+              <div class="s-card-1 d-flex">
+                <div class="card-foryou">
+                  <div class="profile-foryou">
+                    <div class="image-foryou"><img class="image-foryou" src="/assets/images/IMG_4310.jpg" alt="">
+                    </div>
+                    <div class="name-foryou">
+                      <span class="names">abdullah786</span>
+                      <span class="names sug-fo-you-sp">Suggested for you</span>
+                    </div>
+                    <div class="switch-btn"><span class="switch-btn">
+                        <span class="switch-btn">Follow</span>
+                      </span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-card-2 d-flex">
+                <div class="card-foryou">
+                  <div class="profile-foryou">
+                    <div class="image-foryou"><img class="image-foryou"
+                        src="/assets/images/321012644_464342419232543_5709440205566717067_n - Copy (2).jpg" alt="">
+                    </div>
+                    <div class="name-foryou">
+                      <span class="names">abdullah786</span>
+                      <span class="names sug-fo-you-sp">Suggested for you</span>
+                    </div>
+                    <div class="switch-btn"><span class="switch-btn">
+                        <span class="switch-btn">Follow</span>
+                      </span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-card-3 d-flex">
+                <div class="card-foryou">
+                  <div class="profile-foryou">
+                    <div class="image-foryou"><img class="image-foryou" src="/assets/images/IMG_4326.jpg" alt="">
+                    </div>
+                    <div class="name-foryou">
+                      <span class="names">abdullah786</span>
+                      <span class="names sug-fo-you-sp">Suggested for you</span>
+                    </div>
+                    <div class="switch-btn"><span class="switch-btn">
+                        <span class="switch-btn">Follow</span>
+                      </span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-card-4 d-flex">
+                <div class="card-foryou">
+                  <div class="profile-foryou">
+                    <div class="image-foryou"><img class="image-foryou" src="/assets/images/IMG_4307.jpg" alt="">
+                    </div>
+                    <div class="name-foryou">
+                      <span class="names">abdullah786</span>
+                      <span class="names sug-fo-you-sp">Suggested for you</span>
+                    </div>
+                    <div class="switch-btn"><span class="switch-btn">
+                        <span class="switch-btn">Follow</span>
+                      </span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-card-5 d-flex">
+                <div class="card-foryou">
+                  <div class="profile-foryou">
+                    <div class="image-foryou"><img class="image-foryou" src="/assets/images/IMG_4310.jpg" alt="">
+                    </div>
+                    <div class="name-foryou">
+                      <span class="names">abdullah786</span>
+                      <span class="names sug-fo-you-sp">Suggested for you</span>
+                    </div>
+                    <div class="switch-btn"><span class="switch-btn">
+                        <span class="switch-btn">Follow</span>
+                      </span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sugg-foryou-footer d-flex flex-column pt-5">
+            <div class="policies d-flex flex-coloumn">
+              <div class="spans">
+                <span>
+                  <ul class="d-flex flex-row li-gap">
+                    <li>About</li>
+                    <li>Help</li>
+                    <li>Press</li>
+                    <li>API</li>
+                    <li>Jobs</li>
+                    <li>Privacy</li>
+                    <li>Terms</li>
+                    <li>Locations</li>
+                  </ul>
+                </span>
+                <span>
+                  <ul class="d-flex flex-row li-gap">
+                    <li>Locations</li>
+                    <li>Language</li>
+                    <li>Meta Varified</li>
+                  </ul>
+                </span>
+              </div>
+            </div>
+            <div class="copy-right">
+              <p>&copy; 2024 INSTAGRAM FROM ASP</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!--======================== content section ======================= -->
+
+
+  <!-- custom js link -->
+  <script src="js/insta.js"></script>
+  <script src="js/instapost.js"></script>
+  <!-- bootstrape js link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
