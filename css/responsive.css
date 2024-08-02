@@ -1,0 +1,385 @@
+/*=========== media quiry for min 1269px ============= */
+@media (min-width: 1265px) {
+    .card {
+        height: 850px !important;
+    }
+
+    /* message section */
+
+    .user-detail-fixed {
+        width: 85% !important;
+    }
+
+    .chat-detail .chat-input {
+        width: 60% !important;
+    }
+
+    .main-message .profile-message-contact-detail {
+        width: 30% !important;
+    }
+}
+
+/* media quiry for large divices */
+@media (min-width:1161px) and (max-width:1264px) {
+
+    /* navbar section  */
+    .navbar-sec {
+        max-width: 7vmax !important;
+    }
+
+    .content-main-1 {
+        margin-left: 7vmax !important;
+    }
+
+    /* instagram/logo of insta */
+    .insta-name {
+        display: none;
+    }
+
+    .insta-logo {
+        content: url(/assets/svg/instalogo.svg);
+        margin-left: 4px !important;
+    }
+
+    /* icons details/ only icons */
+    .i-d {
+        display: none;
+    }
+
+    .card {
+        height: 800px !important;
+    }
+
+    /*====== navbar end======= */
+    /* content section */
+
+    .sugested-sec {
+        margin-left: 0;
+    }
+
+}
+
+/*===== media quiry for large divice max width 1160px =======*/
+@media (max-width: 1160px) and (min-width: 769px) {
+
+    /* navbar section  */
+    .navbar-sec {
+        max-width: 7vmax !important;
+    }
+
+    .content-main-1 {
+        margin-left: 7vmax !important;
+    }
+
+    .insta-name {
+        display: none;
+    }
+    .ms-3{
+        margin-left: 0.3rem !important;
+    }
+
+    .insta-logo {
+        content: url(/assets/svg/instalogo.svg);
+    }
+
+    /* icons details/ only icons */
+    .i-d {
+        display: none;
+    }
+
+    .card {
+        height: 750px !important;
+    }
+
+    /* sugested for you section */
+    .sugested-sec {
+        display: none;
+    }
+
+    .sugested-foryou-main {
+        display: none !important;
+    }
+
+    /* sidebar width */
+
+}
+
+/*======== media quirey for for mobile devices 767px ========= */
+@media (max-width: 768px) and (min-width: 577px) {
+    .navbar-sec {
+        display: none !important;
+    }
+
+    .mob-t-nav {
+        display: flex !important;
+        position: fixed;
+        width: 100%;
+        justify-content: space-between;
+        top: 0;
+        z-index: 999;
+        border-bottom: 1px solid rgb(122, 122, 122);
+        background-color: black;
+    }
+
+
+
+    .search-m {
+        display: flex !important;
+        padding: 0;
+    }
+
+    .nav-item form img {
+        margin-top: 8px !important;
+    }
+
+    .nav-item {
+        padding: 5px 5px !important;
+    }
+
+    /* navbar bottom on mobile screen */
+    .mob-b-nav {
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 999;
+        border-top: 1px solid rgb(122, 122, 122);
+        background-color: black;
+    }
+
+    .mob-b-nav ul {
+        width: 100%;
+        display: flex !important;
+        justify-content: space-evenly !important;
+        align-items: center;
+    }
+
+    /* content main section */
+    .main-sec .container {
+        padding: 0 !important;
+    }
+
+    .content-main-1 {
+        margin-left: 0 !important;
+    }
+
+    .main-sec {
+        padding-top: 90px;
+    }
+
+    .post-sec {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100%;
+    }
+
+    .post .card {
+        width: 100%;
+    }
+
+    .card {
+        height: 750px !important;
+    }
+
+    .sugested-sec {
+        display: none;
+    }
+
+    .sugested-foryou-main {
+        display: none !important;
+    }
+
+    /* reels section */
+    .reels-content-sec {
+        margin-top: 18%;
+    }
+    .reels-content-sec .actions-btns-main{
+        margin-left: -45px !important;
+        z-index: 999 !important;
+    }
+    /* message section */
+    .fixed-nav-1-detail {
+        display: none !important;
+    }
+
+    .main-message .profile-message-contact-detail {
+        display: none !important;
+    }
+
+   
+
+}
+
+@media (max-width: 576px) and (min-width: 220px) {
+    .navbar-sec {
+        display: none !important;
+    }
+
+    .mob-t-nav {
+        display: flex !important;
+        position: fixed;
+        width: 100%;
+        justify-content: space-between;
+        top: 0;
+        z-index: 999;
+        border-bottom: 1px solid rgb(122, 122, 122);
+        background-color: black;
+    }
+
+    .nav-item input {
+        display: none !important;
+    }
+
+    .search-m {
+        display: flex !important;
+        padding: 0;
+    }
+
+    .nav-item form img {
+        margin-top: 8px !important;
+    }
+
+    .nav-item {
+        padding: 5px 5px !important;
+    }
+
+    /* navbar bottom on mobile screen */
+    .mob-b-nav {
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 999;
+        border-top: 1px solid rgb(122, 122, 122);
+        background-color: black;
+    }
+
+    .mob-b-nav ul {
+        width: 100%;
+        display: flex !important;
+        justify-content: space-evenly !important;
+        align-items: center;
+        padding: 0px 5px !important;
+    }
+
+    /* content main section */
+    .main-sec .container {
+        padding: 0 !important;
+    }
+
+    .content-main-1 {
+        margin: 0 !important;
+    }
+
+    .card {
+        max-width: 600px;
+    }
+
+    .main-sec {
+        padding-top: 90px;
+    }
+
+    .post-sec {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100%;
+    }
+
+    .post_btn_mob {
+        margin-left: 5px;
+    }
+
+    .card {
+        height: 750px !important;
+        padding: 0 !important;
+    }
+
+    .post .card {
+        width: 100% !important;
+    }
+
+    /* suggestion card section in post section */
+    .suggested-sec {
+        display: none !important;
+    }
+
+    .sugested-foryou-main {
+        display: none !important;
+    }
+
+    /* reels section */
+    .main-reels-sec{
+        margin: 5px !important;
+    }
+    .reels-content-sec {
+        margin-top: 18%;
+        width: 100%;
+    }
+    .reels-content-sec .actions-btns-main{
+        margin-left: -45px !important;
+        z-index: 999 !important;
+    }
+    
+
+    /* message section */
+    .fixed-nav-1-detail {
+        display: none !important;
+    }
+
+    .main-message .profile-message-contact-detail {
+        display: none !important;
+    }
+
+    .user-detail-fixed {
+        top: 10% !important;
+        width: 100% !important;
+    }
+
+    .chat-detail-fixed .first-user {
+        gap: 0 !important;
+    }
+
+    .first-user .first-user-name .first-user-name-name {
+        font-size: 12px !important;
+    }
+
+    .first-user .first-user-name .first-user-name-active {
+        font-size: 8px !important;
+    }
+
+    .chat-detail-fixed .fixed-top-icon div img {
+        width: 16px;
+    }
+    .chat-detail .all-chat-user-deatail .chat-user{
+        margin-top: 0 !important;
+    }
+    .all-chat-user-deatail .chat-user .image-chat-det img{
+        width: 75px !important;
+        height: 75px !important;
+    }
+    .all-chat-user-deatail .chat-user .chat-det-name {
+        font-size: 14px !important;
+    }
+    .all-chat-user-deatail .chat-user .chat-det-user-name{
+        font-size: 10px;
+    }
+    .all-chat-user-deatail .chat-user .chat-det-view-btn{
+        margin-top: 10px !important;
+    }
+    .chat-detail .chat-input{
+        bottom: 9% !important;
+        margin: 5px !important;
+        width: 97% !important;
+        font-size: 12px !important;
+        letter-spacing: 1px !important;
+    }
+    .first-two-svgs .imoji-input img{
+        width: 16px !important;
+    }
+    .chat-input .input-last-svgs div span img{
+        width: 16px !important;
+    }
+    .chat-input .main-input-text input::placeholder{
+        font-size: 12px !important;
+    }
+}
