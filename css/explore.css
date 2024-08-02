@@ -1,0 +1,36 @@
+
+.insta-grid {
+    display: grid;
+    z-index: 1;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.insta-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.insta-grid .grid-item {
+    padding: 2px;
+}
+
+body {
+    background-color: black;
+}
+
+.insta-grid .item-1 {
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.insta-grid .item-2 {
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.insta-grid .item-3 {
+    grid-column: auto;
+    grid-row: auto;
+}
+
