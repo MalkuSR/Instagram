@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home • Threads</title>
+    <!-- fevicon instagram -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/threadsfevicon.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/threadsfevicon.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/threadsfevicon.jpg">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- bootstrape stylesheet cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css links -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/threads.css">
+    <link rel="stylesheet" href="css/responsivThread.css">
+
+</head>
+
+<body>
+    <!-- pre loader -->
+    <div id="preloader">
+        <img src="assets/images/threadspreloader.png" alt="">
+        <img src="assets/images/meta image.png" alt="">
+    </div>
+    <!-- ========= navbar start ==========-->
+    <section class="sidebar-threads">
+        <nav class=" threads-navbar-sec navbar-expand bg-body-dark " data-bs-theme="dark">
+            <a class="thread-navbar-brand" href="#"><img class="thread-name" src="assets/svg/threadsicon.svg" alt=""
+                    srcset=""></a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link"><img onclick="loadContent('home.html')" class="home-icon"
+                            src="assets/svg/treadshome.svg" alt="" srcset=""></a>
+                </li>
+                <!-- offcanvas search -->
+                <li class="nav-item">
+                    <a class="nav-link navbar-item active" id="searchOpenBtn" id="home" aria-current="page"
+                        href="#"><img src="assets/svg/search.svg" alt="" srcset=""></a>
+                </li>
+                <div class="offcanva" id="offcanva">
+                    <div class="content">
+                        <h2 class="search-off"><span>Search</span></h2>
+                        <div class="input"><input class="input-inner" type="text" placeholder="Search">
+                            <div class="cancel-svg"><img src="assets/svg/crossoffinput.svg" alt=""></div>
+                        </div>
+                        <hr class="off-hr">
+                        <div class="recent"><span>Recent</span></div>
+                        <div class="recent-search-result">
+                            <div class="result"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay" id="overlay"></div>
+                <!-- offcanvas serach end -->
+                <!-- notification section -->
+                <li class="nav-item">
+                    <a id="notificationOpenBtn" class="nav-link navbar-item" aria-disabled="true"><img
+                            src="assets/svg/threadmobnotification.svg" alt="" srcset=""></a>
+                </li>
+                <!-- offcanvas notification -->
+                <div class="offcanva" id="offcanva">
+                    <div class="content">
+                        <h2 class="search-off"><span>Notifications</span></h2>
+                        <hr class="off-hr">
+                        <div class="recent"><span>Recent</span></div>
+                        <div class="recent-search-result">
+                            <div class="result"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay" id="overlay"></div>
+                <!-- offcanva end -->
+                <!-- user acount -->
+                <li class="nav-item">
+                    <a class="nav-link navbar-item" onclick="loadContent('messagebox.html')" aria-disabled="true"><img
+                            onclick="loadContent('messagebox.html')" src="assets/svg/useracount.svg" alt=""
+                            srcset=""></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav d-flex flex-column nav-main justify-content-start">
+                <!-- last thread and more option -->
+                <!-- pin to home -->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link thread navbar-item" 
+                        aria-disabled="true"><img  src="assets/svg/pintohome.svg"
+                            alt="" srcset=""></a>
+                    <!-- more option -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-item" aria-disabled="true"><img src="assets/svg/More.svg" alt=""
+                            srcset=""></a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <!-- navbar for mobile divices -->
+    <!-- top nav -->
+    <div class="top-mob-thread d-none">
+        <div class="top-navbar">
+            <div class="empty-space"></div>
+            <div class="thread-logo"><img src="assets/svg/threadsicon.svg" alt=""></div>
+            <div class="more-top-nav"><img src="assets/svg/More.svg" alt=""></div>
+        </div>
+    </div>
+    <!-- threads bottom nav -->
+    <div class="bottom-mob-thread d-none">
+        <div class="bottom-navbar">
+            <div class="m-b-ic"><img src="assets/svg/treadshome.svg" alt=""></div>
+            <div class="m-b-ic"><img src="assets/svg/search.svg" alt=""></div>
+            <div class="m-b-ic"><img src="assets/svg/createthreads.svg" alt=""></div>
+            <div class="m-b-ic"><img src="assets/svg/threadmobnotification.svg" alt=""></div>
+            <div class="m-b-ic"><img src="assets/svg/useracount.svg" alt=""></div>
+        </div>
+    </div>
+    <!-- ========= navbar end =========== -->
+    <!-- post section threads -->
+    <div class="content-main-1" id="content-main-1">
+        <div class="main-thread">
+            <!-- foryou top section start -->
+            <div class="foryou-post-sec">
+                <div><span class="for-font">For you</span></div>
+                <div class="toggle-btn">
+                    <img class="toggle-threads" src="assets/svg/toggledropdown.svg" alt="">
+                </div>
+            </div>
+            <!-- top sec for mobile section -->
+            <div class="mob-top-foryou d-none">
+                <div class="foru-item">
+                    <div class="item-1"><span>For you</span></div>
+                </div>
+                <div class="foru-item">
+                    <div class="item-2"><span>Following</span></div>
+                </div>
+            </div>
+            <!-- top for you section end -->
+            <div class="d-flex post-section">
+                <div class="second-main-thread">
+                    <div class="your-profile-start-thread">
+                        <div class="main-pro">
+                            <div class="left-pro">
+                                <div><img src="assets/images/IMG-20240418-WA0007 (1).jpg" alt=""></div>
+                                <div class="input-thread-sec"><input class="input-thread" type="text"
+                                        placeholder="Start a thread..."></div>
+                            </div>
+                            <div class="right-post"><span>Post</span></div>
+                        </div>
+                    </div>
+                    <hr class="after-pro-hr">
+                    <div class="post-second-flex">
+                        <div class="post-third-flex">
+                            <div class="padding-flex">
+                                <div class="main-post-card">
+                                    <!-- post profile image -->
+                                    <div class="post-image">
+                                        <img src="assets/images/IMG_4326.jpg" alt="" class="post-pro-img">
+                                        <div class="plus"><img src="assets/svg/pluspost.svg" alt=""></div>
+                                    </div>
+                                    <!-- main post content -->
+                                    <div class="post-content">
+                                        <!-- first flex pro-det -->
+                                        <div class="profile-name-post">
+                                            <div class="pro-name"><span>quoteswikipedia</span><span
+                                                    class="time-ago">13h</span></div>
+                                            <div class="three-dot-btn"><img src="assets/svg/dotbtn.svg" alt=""></div>
+                                        </div>
+                                        <!-- second flex post det -->
+                                        <div class="post-det">
+                                            <div class="content-det">
+                                                <span>A cat has absolute emotional honesty: human beings, for one reason
+                                                    or another, may hide their feelings, but a cat does not.❤️
+                                                </span>
+                                            </div>
+                                            <div class="hashtags"><a href="#" class="links-tags">MondayMotivation</a>
+                                            </div>
+                                        </div>
+                                        <!-- post-video-content -->
+                                        <div class="post-video-content">
+                                            <div class="grid-post-content">
+                                                <img src="assets/images/IMG_4310.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- post control btns -->
+                                        <div class="control-btns d-flex flex-row">
+                                            <div class="like-btn"><img class="po-co-btns" src="assets/svg/heart.svg"
+                                                    alt=""></div>
+                                            <div class="comment-btn"><img class="po-co-btns"
+                                                    src="assets/svg/comment.svg" alt=""></div>
+                                            <div class="repost-btn"><img class="po-co-btns"
+                                                    src="assets/svg/treadsvisit.svg" alt=""></div>
+                                            <div class="share-btn"><img class="po-co-btns" src="assets/svg/share.svg"
+                                                    alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="after-card-hr">
+                    <div class="post-second-flex">
+                        <div class="post-third-flex">
+                            <div class="padding-flex">
+                                <div class="main-post-card">
+                                    <!-- post profile image -->
+                                    <div class="post-image">
+                                        <img src="assets/images/IMG_4326.jpg" alt="" class="post-pro-img">
+                                        <div class="plus"><img src="assets/svg/pluspost.svg" alt=""></div>
+                                    </div>
+                                    <!-- main post content -->
+                                    <div class="post-content">
+                                        <!-- first flex pro-det -->
+                                        <div class="profile-name-post">
+                                            <div class="pro-name"><span>quoteswikipedia</span><span
+                                                    class="time-ago">13h</span></div>
+                                            <div class="three-dot-btn"><img src="assets/svg/dotbtn.svg" alt=""></div>
+                                        </div>
+                                        <!-- second flex post det -->
+                                        <div class="post-det">
+                                            <div class="content-det">
+                                                <span>A cat has absolute emotional honesty: human beings, for one reason
+                                                    or another, may hide their feelings, but a cat does not.❤️
+                                                </span>
+                                            </div>
+                                            <div class="hashtags"><a href="#" class="links-tags">MondayMotivation</a>
+                                            </div>
+                                        </div>
+                                        <!-- post-video-content -->
+                                        <div class="post-video-content">
+                                            <div class="grid-post-content">
+                                                <img src="assets/images/IMG_4310.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- post control btns -->
+                                        <div class="control-btns d-flex flex-row">
+                                            <div class="like-btn"><img class="po-co-btns" src="assets/svg/heart.svg"
+                                                    alt=""></div>
+                                            <div class="comment-btn"><img class="po-co-btns"
+                                                    src="assets/svg/comment.svg" alt=""></div>
+                                            <div class="repost-btn"><img class="po-co-btns"
+                                                    src="assets/svg/treadsvisit.svg" alt=""></div>
+                                            <div class="share-btn"><img class="po-co-btns" src="assets/svg/share.svg"
+                                                    alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="after-card-hr">
+                    <div class="post-second-flex">
+                        <div class="post-third-flex">
+                            <div class="padding-flex">
+                                <div class="main-post-card">
+                                    <!-- post profile image -->
+                                    <div class="post-image">
+                                        <img src="assets/images/IMG_4326.jpg" alt="" class="post-pro-img">
+                                        <div class="plus"><img src="assets/svg/pluspost.svg" alt=""></div>
+                                    </div>
+                                    <!-- main post content -->
+                                    <div class="post-content">
+                                        <!-- first flex pro-det -->
+                                        <div class="profile-name-post">
+                                            <div class="pro-name"><span>quoteswikipedia</span><span
+                                                    class="time-ago">13h</span></div>
+                                            <div class="three-dot-btn"><img src="assets/svg/dotbtn.svg" alt=""></div>
+                                        </div>
+                                        <!-- second flex post det -->
+                                        <div class="post-det">
+                                            <div class="content-det">
+                                                <span>A cat has absolute emotional honesty: human beings, for one reason
+                                                    or another, may hide their feelings, but a cat does not.❤️
+                                                </span>
+                                            </div>
+                                            <div class="hashtags"><a href="#" class="links-tags">MondayMotivation</a>
+                                            </div>
+                                        </div>
+                                        <!-- post-video-content -->
+                                        <div class="post-video-content">
+                                            <div class="grid-post-content">
+                                                <img src="assets/images/IMG_4310.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- post control btns -->
+                                        <div class="control-btns d-flex flex-row">
+                                            <div class="like-btn"><img class="po-co-btns" src="assets/svg/heart.svg"
+                                                    alt=""></div>
+                                            <div class="comment-btn"><img class="po-co-btns"
+                                                    src="assets/svg/comment.svg" alt=""></div>
+                                            <div class="repost-btn"><img class="po-co-btns"
+                                                    src="assets/svg/treadsvisit.svg" alt=""></div>
+                                            <div class="share-btn"><img class="po-co-btns" src="assets/svg/share.svg"
+                                                    alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="after-card-hr">
+                    <div class="post-second-flex">
+                        <div class="post-third-flex">
+                            <div class="padding-flex">
+                                <div class="main-post-card">
+                                    <!-- post profile image -->
+                                    <div class="post-image">
+                                        <img src="assets/images/IMG_4326.jpg" alt="" class="post-pro-img">
+                                        <div class="plus"><img src="assets/svg/pluspost.svg" alt=""></div>
+                                    </div>
+                                    <!-- main post content -->
+                                    <div class="post-content">
+                                        <!-- first flex pro-det -->
+                                        <div class="profile-name-post">
+                                            <div class="pro-name"><span>quoteswikipedia</span><span
+                                                    class="time-ago">13h</span></div>
+                                            <div class="three-dot-btn"><img src="assets/svg/dotbtn.svg" alt=""></div>
+                                        </div>
+                                        <!-- second flex post det -->
+                                        <div class="post-det">
+                                            <div class="content-det">
+                                                <span>A cat has absolute emotional honesty: human beings, for one reason
+                                                    or another, may hide their feelings, but a cat does not.❤️
+                                                </span>
+                                            </div>
+                                            <div class="hashtags"><a href="#" class="links-tags">MondayMotivation</a>
+                                            </div>
+                                        </div>
+                                        <!-- post-video-content -->
+                                        <div class="post-video-content">
+                                            <div class="grid-post-content">
+                                                <img src="assets/images/IMG_4310.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- post control btns -->
+                                        <div class="control-btns d-flex flex-row">
+                                            <div class="like-btn"><img class="po-co-btns" src="assets/svg/heart.svg"
+                                                    alt=""></div>
+                                            <div class="comment-btn"><img class="po-co-btns"
+                                                    src="assets/svg/comment.svg" alt=""></div>
+                                            <div class="repost-btn"><img class="po-co-btns"
+                                                    src="assets/svg/treadsvisit.svg" alt=""></div>
+                                            <div class="share-btn"><img class="po-co-btns" src="assets/svg/share.svg"
+                                                    alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="after-card-hr">
+                    <div class="post-second-flex">
+                        <div class="post-third-flex">
+                            <div class="padding-flex">
+                                <div class="main-post-card">
+                                    <!-- post profile image -->
+                                    <div class="post-image">
+                                        <img src="assets/images/IMG_4326.jpg" alt="" class="post-pro-img">
+                                        <div class="plus"><img src="assets/svg/pluspost.svg" alt=""></div>
+                                    </div>
+                                    <!-- main post content -->
+                                    <div class="post-content">
+                                        <!-- first flex pro-det -->
+                                        <div class="profile-name-post">
+                                            <div class="pro-name"><span>quoteswikipedia</span><span
+                                                    class="time-ago">13h</span></div>
+                                            <div class="three-dot-btn"><img src="assets/svg/dotbtn.svg" alt=""></div>
+                                        </div>
+                                        <!-- second flex post det -->
+                                        <div class="post-det">
+                                            <div class="content-det">
+                                                <span>A cat has absolute emotional honesty: human beings, for one reason
+                                                    or another, may hide their feelings, but a cat does not.❤️
+                                                </span>
+                                            </div>
+                                            <div class="hashtags"><a href="#" class="links-tags">MondayMotivation</a>
+                                            </div>
+                                        </div>
+                                        <!-- post-video-content -->
+                                        <div class="post-video-content">
+                                            <div class="grid-post-content">
+                                                <img src="assets/images/IMG_4310.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- post control btns -->
+                                        <div class="control-btns d-flex flex-row">
+                                            <div class="like-btn"><img class="po-co-btns" src="assets/svg/heart.svg"
+                                                    alt=""></div>
+                                            <div class="comment-btn"><img class="po-co-btns"
+                                                    src="assets/svg/comment.svg" alt=""></div>
+                                            <div class="repost-btn"><img class="po-co-btns"
+                                                    src="assets/svg/treadsvisit.svg" alt=""></div>
+                                            <div class="share-btn"><img class="po-co-btns" src="assets/svg/share.svg"
+                                                    alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="after-card-hr">
+                    <div class="post-second-flex">
+                        <div class="post-third-flex">
+                            <div class="padding-flex">
+                                <div class="main-post-card">
+                                    <!-- post profile image -->
+                                    <div class="post-image">
+                                        <img src="assets/images/IMG_4326.jpg" alt="" class="post-pro-img">
+                                        <div class="plus"><img src="assets/svg/pluspost.svg" alt=""></div>
+                                    </div>
+                                    <!-- main post content -->
+                                    <div class="post-content">
+                                        <!-- first flex pro-det -->
+                                        <div class="profile-name-post">
+                                            <div class="pro-name"><span>quoteswikipedia</span><span
+                                                    class="time-ago">13h</span></div>
+                                            <div class="three-dot-btn"><img src="assets/svg/dotbtn.svg" alt=""></div>
+                                        </div>
+                                        <!-- second flex post det -->
+                                        <div class="post-det">
+                                            <div class="content-det">
+                                                <span>A cat has absolute emotional honesty: human beings, for one reason
+                                                    or another, may hide their feelings, but a cat does not.❤️
+                                                </span>
+                                            </div>
+                                            <div class="hashtags"><a href="#" class="links-tags">MondayMotivation</a>
+                                            </div>
+                                        </div>
+                                        <!-- post-video-content -->
+                                        <div class="post-video-content">
+                                            <div class="grid-post-content">
+                                                <img src="assets/images/IMG_4310.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- post control btns -->
+                                        <div class="control-btns d-flex flex-row">
+                                            <div class="like-btn"><img class="po-co-btns" src="assets/svg/heart.svg"
+                                                    alt=""></div>
+                                            <div class="comment-btn"><img class="po-co-btns"
+                                                    src="assets/svg/comment.svg" alt=""></div>
+                                            <div class="repost-btn"><img class="po-co-btns"
+                                                    src="assets/svg/treadsvisit.svg" alt=""></div>
+                                            <div class="share-btn"><img class="po-co-btns" src="assets/svg/share.svg"
+                                                    alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="after-card-hr">
+                    <div class="post-second-flex">
+                        <div class="post-third-flex">
+                            <div class="padding-flex">
+                                <div class="main-post-card">
+                                    <!-- post profile image -->
+                                    <div class="post-image">
+                                        <img src="assets/images/IMG_4326.jpg" alt="" class="post-pro-img">
+                                        <div class="plus"><img src="assets/svg/pluspost.svg" alt=""></div>
+                                    </div>
+                                    <!-- main post content -->
+                                    <div class="post-content">
+                                        <!-- first flex pro-det -->
+                                        <div class="profile-name-post">
+                                            <div class="pro-name"><span>quoteswikipedia</span><span
+                                                    class="time-ago">13h</span></div>
+                                            <div class="three-dot-btn"><img src="assets/svg/dotbtn.svg" alt=""></div>
+                                        </div>
+                                        <!-- second flex post det -->
+                                        <div class="post-det">
+                                            <div class="content-det">
+                                                <span>A cat has absolute emotional honesty: human beings, for one reason
+                                                    or another, may hide their feelings, but a cat does not.❤️
+                                                </span>
+                                            </div>
+                                            <div class="hashtags"><a href="#" class="links-tags">MondayMotivation</a>
+                                            </div>
+                                        </div>
+                                        <!-- post-video-content -->
+                                        <div class="post-video-content">
+                                            <div class="grid-post-content">
+                                                <img src="assets/images/IMG_4310.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- post control btns -->
+                                        <div class="control-btns d-flex flex-row">
+                                            <div class="like-btn"><img class="po-co-btns" src="assets/svg/heart.svg"
+                                                    alt=""></div>
+                                            <div class="comment-btn"><img class="po-co-btns"
+                                                    src="assets/svg/comment.svg" alt=""></div>
+                                            <div class="repost-btn"><img class="po-co-btns"
+                                                    src="assets/svg/treadsvisit.svg" alt=""></div>
+                                            <div class="share-btn"><img class="po-co-btns" src="assets/svg/share.svg"
+                                                    alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- post section thread end -->
+
+    <!-- custom js link -->
+    <script src="js/insta.js"></script>
+    <!-- bootstrape js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
