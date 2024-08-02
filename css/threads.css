@@ -1,0 +1,350 @@
+/* common utility css start */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a,
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+/* custom root directory */
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+    --dark-color: gray;
+    --border-color: rgb(54 54 54);
+    --visited-color: rgb(224, 241, 255);
+    --btn-color-thread: #181818;
+    --links-color: #0095f6;
+    --thread-navbar-mob-color: rgb(24 24 24 / 85%);
+
+    /* gradient color */
+    --gradient-lavender: rgb(211, 0, 197);
+    --gradient-orange: rgb(255, 122, 0);
+    --gradient-pink: rgb(255, 1, 105);
+    --gradient-purple: rgb(118, 56, 250);
+    --gradient-red: rgb(255, 48, 64);
+    --gradient-yellow: rgb(255, 214, 0);
+    /* background: linear-gradient(circle, rgb(238 1 142), rgb(254 123 11), rgb(87 9 28)); */
+}
+
+/* navbar section */
+.threads-navbar-sec {
+    position: fixed;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    width: 7vmax;
+    height: 100vh;
+
+}
+
+/* threads icon */
+.threads-navbar-sec .thread-navbar-brand {
+    padding: 16px 0 0 16px;
+}
+
+.threads-navbar-sec .thread-navbar-brand img {
+    width: 29px;
+    height: 29px;
+
+}
+
+/* second section from home */
+.threads-navbar-sec .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* first item */
+.threads-navbar-sec .navbar-nav .nav-item {
+    display: flex;
+    justify-content: center;
+}
+
+.threads-navbar-sec .navbar-nav .nav-item .nav-link img {
+    width: 25px;
+    height: 25px;
+}
+
+/* navbar end */
+
+/*  threads section */
+.content-main-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.content-main-1 .main-thread {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 640px;
+    width: 100%;
+}
+
+.content-main-1 .main-thread .foryou-post-sec {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    background: #000000;
+    gap: 10px;
+    height: 60px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.content-main-1 .main-thread .foryou-post-sec .for-font {
+    font-size: 15px;
+    font-weight: 700;
+    color: #f5f5f5;
+}
+
+.content-main-1 .main-thread .foryou-post-sec .toggle-btn {
+    background: var(--btn-color-thread);
+    width: 24px;
+    height: auto;
+    /* position: relative; */
+    border-radius: 50%;
+}
+
+.content-main-1 .main-thread .foryou-post-sec .toggle-btn img {
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    /* position: absolute; */
+}
+
+.content-main-1 .main-thread .post-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    margin-top: 70px;
+}
+
+.content-main-1 .main-thread .post-section .second-main-thread {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.content-main-1 .main-thread .post-section .second-main-thread .your-profile-start-thread {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+    width: 100%;
+}
+
+.content-main-1 .main-thread .post-section .second-main-thread .your-profile-start-thread .main-pro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 0;
+    align-items: center;
+
+}
+
+.second-main-thread .your-profile-start-thread .main-pro .left-pro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.your-profile-start-thread .main-pro .left-pro .input-thread-sec .input-thread {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.post-section .second-main-thread .your-profile-start-thread .main-pro .left-pro div img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.your-profile-start-thread .main-pro .right-post {
+    font-size: 15px;
+    color: #f3f5f7;
+    font-weight: 700;
+}
+
+.post-section .second-main-thread .after-pro-hr {
+    width: 100%;
+}
+
+.post-section .second-main-thread .post-second-flex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-section .second-main-thread .post-second-flex .post-third-flex {
+    display: flex;
+    padding-top: 5px;
+    width: 100%;
+}
+
+.second-main-thread .post-second-flex .post-third-flex .padding-flex {
+    display: flex;
+    width: 100%;
+    padding: 8px 24px;
+    align-items: center;
+}
+
+/* main card */
+.post-second-flex .post-third-flex .padding-flex .main-post-card {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 10fr;
+}
+
+/* profile image main */
+.post-third-flex .padding-flex .main-post-card .post-image {
+    display: flex;
+    width: 48px;
+    height: 45px;
+    justify-content: flex-start;
+    position: relative;
+    align-items: center;
+}
+
+/* profile image */
+.post-second-flex .post-third-flex .padding-flex .main-post-card .post-image img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    grid-column-start: 1;
+}
+
+/* profile + sign main div */
+.padding-flex .main-post-card .post-image .plus {
+    position: absolute;
+    background-color: #f3f5f7;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    bottom: 2px;
+    right: 9px;
+}
+
+/* profile + sign  */
+.main-post-card .post-image .plus img {
+    width: 10px !important;
+    height: 10px !important;
+    margin-left: 4.5px;
+    margin-bottom: 8px;
+}
+
+/* main post contenmt */
+.post-third-flex .padding-flex .main-post-card .post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: auto 12px;
+}
+
+/* post profile name */
+.post-third-flex .padding-flex .main-post-card .post-content .profile-name-post {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.main-post-card .post-content .profile-name-post .pro-name {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.main-post-card .post-content .profile-name-post .pro-name .time-ago {
+    font-size: 15px;
+    font-weight: 400;
+    padding-left: 15px;
+    color: #777;
+}
+
+/* post details */
+.padding-flex .main-post-card .post-content .post-det {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+}
+
+.padding-flex .main-post-card .post-content .post-det span {
+    font-size: 15px;
+
+}
+
+.main-post-card .post-content .post-det .hashtags .links-tag {
+    font-size: 15px;
+    color: #0095f6;
+    font-weight: 300;
+}
+
+/* post main video pic */
+.padding-flex .main-post-card .post-content .post-video-content {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 100%;
+}
+.post-content .post-video-content .grid-post-content{
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+
+}
+.post-content .post-video-content .grid-post-content img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.post-content .control-btns{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    width: 100%;
+}
+.post-content .control-btns div img{
+    padding: 10px;
+}
+.after-card-hr{
+    width: 100%;
+}
