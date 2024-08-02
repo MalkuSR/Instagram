@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 935px;
+    width: 100%;
+}
+
+.phone img {
+    width: 96%;
+    height: 100%;
+    
+}
+
+.login-form {
+    width: 350px;
+    padding: 10px;
+    background-color: #fff;
+    margin-left: 32px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Billabong', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background-color: #fafafa;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    
+    background-color: #3897f0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #8e8e8e;
+    margin: 10px 0;
+}
+
+.or::before, .or::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #dbdbdb;
+}
+
+.or::before {
+    margin-right: 10px;
+}
+
+.or::after {
+    margin-left: 10px;
+}
+
+.fb-login {
+    background-color: #4267b2;
+}
+
+a {
+    color: #00376b;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.signup {
+    margin: 13px 0;
+    padding: 10px 0;
+    border-bottom:0px solid #dbdbdb;
+}
+
+.app-download {
+    margin-top: 20px;
+}
+
+.app-download img {
+    width: 40%;
+    margin: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
