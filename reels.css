@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+/* navbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background-color: gray;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+}
+
+/* all-reels */
+.all-reels{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* reels main sec */
+.main-reels-sec {
+    margin: 2% auto;
+
+}
+
+/* reels content sec image etc */
+.reels-content-sec {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 15px;
+}
+
+/* reels card */
+.reels-card {
+    position: relative;
+    max-width: 500px;
+    object-fit: cover;
+    width: 100%;
+    justify-content: center;
+    max-height: 90%;
+}
+
+/* reels card image */
+.reels-card img {
+    width: 500px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.reels-card video {
+    width: 500px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* reels profile image */
+.reels-card .pro-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: auto;
+    gap: 19px;
+}
+.reels-card .pro-detail .profile-name img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* >follow btn */
+.reels-card .pro-detail .follow-btn{
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffff;
+    border: 1px solid rgb(108, 108, 108);
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 32px;
+    border-radius: 10px;
+}
+
+/* profile deatail */
+.reels-card .content-reel {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 83%;
+    align-items: self-start;
+    gap: 20px;
+    bottom: 1%;
+    left: 8%;
+}
+
+
+.reels-card .pro-detail .profile-name .pro-name-reel {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f5f5f5;
+}
+
+/* hashtags in profile detail */
+.reels-card .hashtag {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.reels-card .hashtag span {
+    font-size: 14px;
+    color: #ffff;
+    font-weight: 500;
+}
+
+/* song detail sec */
+.reels-card .song-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 95vmax;
+    max-height: 30px;
+    border-radius: 20px;
+    background: #29212165;
+    padding: 5px 10px;
+    gap: 5px;
+}
+.reels-card .song-detail .audio-image img{
+    width: 12px;
+    height: 12px;
+}
+.reels-card .song-detail .detail-song-reel {
+    font-size: 14px;
+    color: #ffff;
+}
+
+/* play btn */
+.reels-card .play-btn {
+    position: absolute;
+    bottom:  50%;
+    left: 40%;
+}
+
+.reels-card .play-btn .play-main {
+    position: relative;
+    width: 71px;
+    height: 71px;
+    background: rgba(13, 13, 13, 0.61);
+    border-radius: 50%;
+}
+
+.reels-card .play-btn .play-main img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+
+/* actions btns */
+.reels-content-sec .actions-btns-main{
+    margin-left: 0;
+}
+.reels-content-sec .actions-btns-main .action-btns{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.reels-content-sec .actions-btns-main .action-btns .like-sec{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    margin: auto;
+}
+.reels-content-sec .actions-btns-main .action-btns .like-sec img{
+    width: 24px;
+}
+.reels-content-sec .actions-btns-main .action-btns .like-sec .counter{
+    color: #fff;
+}
+.reels-content-sec .actions-btns-main .action-btns .song-img-det{
+    width: 24px;
+    border: 1px solid rgb(94, 94, 94);
+    border-radius: 5px;
+} 
