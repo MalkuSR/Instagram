@@ -37,7 +37,7 @@
     }
 
     .insta-logo {
-        content: url(/assets/svg/instalogo.svg);
+        content: url(../assets/svg/instalogo.svg);
         margin-left: 4px !important;
     }
 
@@ -79,7 +79,7 @@
     }
 
     .insta-logo {
-        content: url(/assets/svg/instalogo.svg);
+        content: url(../assets/svg/instalogo.svg);
     }
 
     /* icons details/ only icons */
