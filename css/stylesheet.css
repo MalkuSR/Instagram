@@ -154,26 +154,26 @@ ul li {
 }
 
 .thread:hover {
-    background-image: url(/assets/svg/treadsvisit.svg);
+    background-image: url(../assets/svg/treadsvisit.svg);
 }
 
 .nav-item.active a span{
     font-weight: 700;
 }
 .nav-item.active a .homeActive{
-    content: url(/assets/svg/home.svg);
+    content: url(../assets/svg/home.svg);
     background: transparent;
 }
 .nav-item.active a .searchActive{
-    content: url(/assets/svg/searchActive2.svg);
+    content: url(../assets/svg/searchActive2.svg);
     background: transparent;
 }
 .nav-item.active a .exploreActive{
-    content: url(/assets/svg/exploreactive.svg);
+    content: url(../assets/svg/exploreactive.svg);
     background: transparent;
 }
 .nav-item.active a .reelsActive{
-    content: url(/assets/svg/reelsActive.svg);
+    content: url(../assets/svg/reelsActive.svg);
     background: transparent;
 }
 .nav-item.active a {
@@ -181,11 +181,11 @@ ul li {
     outline: none;
 }
 .nav-item.active a .messageActive{
-    content: url(/assets/svg/messageActive2.svg);
+    content: url(../assets/svg/messageActive2.svg);
     background: transparent;
 }
 .nav-item.active a .notificationActive{
-    content: url(/assets/svg/notificationActive.svg);
+    content: url(../assets/svg/notificationActive.svg);
     background: transparent;
 }
 .navbar-item {
@@ -293,7 +293,7 @@ ul li {
 }
 
 .insta-logo.iconShow {
-    content: url(/assets/svg/instalogo.svg);
+    content: url(../assets/svg/instalogo.svg);
     margin-left: 3px !important;
 }
 
@@ -322,13 +322,13 @@ ul li {
 /* like btn */
 
 .like-button.liked {
-    background: url(/assets/svg/heart_red.svg) no-repeat;
+    background: url(../assets/svg/heart_red.svg) no-repeat;
     /* Change color when liked */
 }
 
 /* favourit btn */
 .favourit.favouritBtn {
-    background: url(/assets/svg/favouritpostwhite.svg) no-repeat;
+    background: url(../assets/svg/favouritpostwhite.svg) no-repeat;
 }
 
 /*content-sec> post-sec */
