@@ -161,7 +161,7 @@ ul li {
     font-weight: 700;
 }
 .nav-item.active a .homeActive{
-    content: url(../assets/svg/home.svg);
+    content: url(../assets/svg/homeNonActive.svg);
     background: transparent;
 }
 .nav-item.active a .searchActive{
